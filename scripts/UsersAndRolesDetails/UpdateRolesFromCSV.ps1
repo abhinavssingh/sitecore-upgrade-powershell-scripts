@@ -95,7 +95,7 @@ if ($data.Count -eq 0) {
     Show-Alert "No roles details found."
 }
 else {
-    $data.Values | Show-ListView -Title $PSScript.Name -InfoDescription "Total roles updated: $($data.Count)" -PageSize 25
+    $data.Values | Show-ListView -Title $PSScript.Name -InfoDescription "`nTotal roles updated: $($data.Count)" -PageSize 25
 }
 
 Close-Window

@@ -76,7 +76,7 @@ if ($data.Count -eq 0) {
     Show-Alert "No users details found."
 }
 else {
-    $data.Values | Show-ListView -Title $PSScript.Name -InfoDescription "Total users custom profile updated: $($data.Count)" -PageSize 25
+    $data.Values | Show-ListView -Title $PSScript.Name -InfoDescription "`nTotal users custom profile updated: $($data.Count)" -PageSize 25
 }
 
 Close-Window

@@ -84,7 +84,7 @@ if ($data.Count -eq 0) {
     Show-Alert "No user details found."
 }
 else {
-    $data.Values | Show-ListView -Title $PSScript.Name -InfoDescription "Total users updated: $($data.Count)" -PageSize 25
+    $data.Values | Show-ListView -Title $PSScript.Name -InfoDescription "`nTotal users updated: $($data.Count)" -PageSize 25
 }
 
 Close-Window
