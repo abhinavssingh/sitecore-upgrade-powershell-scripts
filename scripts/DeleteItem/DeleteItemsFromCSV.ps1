@@ -35,7 +35,7 @@ $csvData = Import-Csv -Path $inputFile
 
 foreach ($row in $csvData)
 {
-	$ItemID = "{" + $row.ProductItemID + "}"
+	$ItemID = $row.ItemId
 	$Item = Get-Item -Path master: -Id $ItemID
 
 	$itemId = $Item.id
