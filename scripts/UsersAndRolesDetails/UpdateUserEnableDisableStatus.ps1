@@ -1,3 +1,11 @@
+<#
+    .SYNOPSIS
+        Update users status through csv file.
+    
+    .NOTES
+        Abhinav Singh
+#>
+
 $Time = [System.Diagnostics.Stopwatch]::StartNew()
 Write-Host "Script Execution Started"
 
@@ -22,7 +30,7 @@ $uploadFile = Show-ModalDialog -HandleParameters @{
     "h" = "FileBrowser";
 } -Control "FileBrowser" -Width 500
 
-if($null -eq $uploadFile) {
+if ($null -eq $uploadFile) {
     Write-Host "No file selected. Exiting script."
     Close-Window
     return
@@ -34,41 +42,50 @@ $inputFile = $webRootPath + $uploadFile
 # Load the csv data into a variable
 $csvData = Import-Csv -Path $inputFile
 
-foreach ($row in $csvData) {
-    $userName = $row.UserName
-    $user = Get-User -Filter $userName
-    $userDetails = Get-User -Identity $user.Name
-    if ($user.Count -gt 0) {
-        if ($row.NewStatus.ToLower() -eq "false") {
-            $key = "${userName}"
-            $itemData = New-Object PSObject -Property @{
-                "UserName"  = $userName
-                "OldStatus" = $userDetails.IsEnabled
-                "NewStatus" = $row.NewStatus
-            }
+if ($null -eq $csvData) {
+    Write-Host "No data found in the CSV file. Exiting script."
+    Close-Window
+    return
+}
+else {
+    foreach ($row in $csvData) {
+        $userName = $row.UserName
+        $user = Get-User -Filter $userName
+        $userDetails = Get-User -Identity $user.Name
+        if ($user.Count -gt 0) {
+            if ($row.NewStatus.ToLower() -eq "false") {
+                $key = "${userName}"
+                $itemData = New-Object PSObject -Property @{
+                    "UserName"  = $userName
+                    "OldStatus" = $userDetails.IsEnabled
+                    "NewStatus" = $row.NewStatus
+                }
 
-            # Add the data to the hashtable with the composite key
-            $data[$key] = $itemData
-            Disable-User -Identity $userName
-            Write-Output "user-" $userName "disabled"
-        }
-        if ($row.NewStatus.ToLower() -eq "true") {
-            $key = "${userName}"
-            $itemData = New-Object PSObject -Property @{
-                "UserName"  = $userName
-                "OldStatus" = $userDetails.IsEnabled
-                "NewStatus" = $row.NewStatus
+                # Add the data to the hashtable with the composite key
+                $data[$key] = $itemData
+                Disable-User -Identity $userName
+                Write-Output "user-" $userName "disabled"
             }
-            # Add the data to the hashtable with the composite key
-            $data[$key] = $itemData
-            Enable-User -Identity $userName
-            Write-Output "user-" $userName "enabled"
+            if ($row.NewStatus.ToLower() -eq "true") {
+                $key = "${userName}"
+                $itemData = New-Object PSObject -Property @{
+                    "UserName"  = $userName
+                    "OldStatus" = $userDetails.IsEnabled
+                    "NewStatus" = $row.NewStatus
+                }
+                # Add the data to the hashtable with the composite key
+                $data[$key] = $itemData
+                Enable-User -Identity $userName
+                Write-Output "user-" $userName "enabled"
+            }
         }
-    }
-    else {
-        Write-Output "user-" $userName "not found"
+        else {
+            Write-Output "user-" $userName "not found"
+        }
     }
 }
+
+
 
 
 #Elapsed time

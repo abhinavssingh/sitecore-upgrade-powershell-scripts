@@ -1,4 +1,12 @@
-﻿$Time = [System.Diagnostics.Stopwatch]::StartNew()
+﻿<#
+    .SYNOPSIS
+        Update users password through csv file.
+    
+    .NOTES
+        Abhinav Singh
+#>
+
+$Time = [System.Diagnostics.Stopwatch]::StartNew()
 Write-Host "Script Execution Started"
 
 function GetHostName {
@@ -19,7 +27,7 @@ $uploadFile = Show-ModalDialog -HandleParameters @{
     "h" = "FileBrowser";
 } -Control "FileBrowser" -Width 500
 
-if($null -eq $uploadFile) {
+if ($null -eq $uploadFile) {
     Write-Host "No file selected. Exiting script."
     Close-Window
     return
@@ -35,15 +43,21 @@ $connection = [Sitecore.Configuration.Settings]::GetConnectionString("core")
 # Import CSV data
 $userData = Import-Csv -Path $inputFile
 
-# Insert into the target database
-foreach ($user in $userData) {
-    $userName = $user.UserName
-    $password = $user.Password
-    $passwordSalt = $user.PasswordSalt
-    $isApproved = [int]$user.IsApproved
+if ($null -eq $userData) {
+    Write-Host "No data found in the CSV file. Exiting script."
+    Close-Window
+    return
+}
+else {
+    # Insert into the target database
+    foreach ($user in $userData) {
+        $userName = $user.UserName
+        $password = $user.Password
+        $passwordSalt = $user.PasswordSalt
+        $isApproved = [int]$user.IsApproved
 
-    # Execute SQL query
-    $query = @"
+        # Execute SQL query
+        $query = @"
     UPDATE dbo.aspnet_Membership
     SET Password = '$password', 
         PasswordSalt = '$passwordSalt', 
@@ -53,9 +67,10 @@ foreach ($user in $userData) {
     );
 "@
 
-    # Execute SQL query
-    Invoke-SqlCommand -Connection $connection -Query $query
-    Write-Host "Updated password for user: $userName"
+        # Execute SQL query
+        Invoke-SqlCommand -Connection $connection -Query $query
+        Write-Host "Updated password for user: $userName"
+    }
 }
 
 Write-Host "CSV import completed successfully!"

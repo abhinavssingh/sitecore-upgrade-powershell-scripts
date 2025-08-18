@@ -1,3 +1,11 @@
+<#
+    .SYNOPSIS
+        Update users role through csv file.
+    
+    .NOTES
+        Abhinav Singh
+#>
+
 $Time = [System.Diagnostics.Stopwatch]::StartNew()
 Write-Host "Script Execution Started"
 
@@ -22,7 +30,7 @@ $uploadFile = Show-ModalDialog -HandleParameters @{
     "h" = "FileBrowser";
 } -Control "FileBrowser" -Width 500
 
-if($null -eq $uploadFile) {
+if ($null -eq $uploadFile) {
     Write-Host "No file selected. Exiting script."
     Close-Window
     return
@@ -34,53 +42,61 @@ $inputFile = $webRootPath + $uploadFile
 # Load the csv data into a variable
 $csvData = Import-Csv -Path $inputFile
 
-foreach ($row in $csvData) {
-    $username = $row.UserName
-    $oldRoles = $row.RemoveRoles
-    $newRoles = $row.AddRoles
-    $addRoles = $row.AddRoles -split ";" | Where-Object { $_ } #remove empty values
-    $removeRoles = $row.RemoveRoles -split ";" | Where-Object { $_ } #remove empty values
-    # Get the Sitecore user object
-    $sitecoreUser = Get-User -Identity $username
-    if ($sitecoreUser) {
+if ($null -eq $csvData) {
+    Write-Host "No data found in the CSV file. Exiting script."
+    Close-Window
+    return
+}
+else {
+    foreach ($row in $csvData) {
+        $username = $row.UserName
+        $oldRoles = $row.RemoveRoles
+        $newRoles = $row.AddRoles
+        $addRoles = $row.AddRoles -split ";" | Where-Object { $_ } #remove empty values
+        $removeRoles = $row.RemoveRoles -split ";" | Where-Object { $_ } #remove empty values
+        # Get the Sitecore user object
+        $sitecoreUser = Get-User -Identity $username
+        if ($sitecoreUser) {
 
-        $key = "${userName}"
-        $itemData = New-Object PSObject -Property @{
-            "UserName" = $userName
-            "OldRoles" = $oldRoles
-            "NewRoles" = $newRoles
-        }
+            $key = "${userName}"
+            $itemData = New-Object PSObject -Property @{
+                "UserName" = $userName
+                "OldRoles" = $oldRoles
+                "NewRoles" = $newRoles
+            }
 
-        # Add the data to the hashtable with the composite key
-        $data[$key] = $itemData
+            # Add the data to the hashtable with the composite key
+            $data[$key] = $itemData
         
-        # Remove roles
-        foreach ($roleName in $removeRoles) {
-            try {
-                Remove-RoleMember -Identity $roleName -Members $sitecoreUser.Name
-                Write-Host "Removed role '$roleName' from user '$username'"
+            # Remove roles
+            foreach ($roleName in $removeRoles) {
+                try {
+                    Remove-RoleMember -Identity $roleName -Members $sitecoreUser.Name
+                    Write-Host "Removed role '$roleName' from user '$username'"
+                }
+                catch {
+                    Write-Error "Error removing role '$roleName' from user '$username': $($_.Exception.Message)"
+                }
             }
-            catch {
-                Write-Error "Error removing role '$roleName' from user '$username': $($_.Exception.Message)"
-            }
-        }
 
-        # Add roles
-        foreach ($roleName in $addRoles) {
-            try {
-                Add-RoleMember -Identity $roleName -Members $sitecoreUser.Name
-                Write-Host "Added role '$roleName' to user '$username'"
+            # Add roles
+            foreach ($roleName in $addRoles) {
+                try {
+                    Add-RoleMember -Identity $roleName -Members $sitecoreUser.Name
+                    Write-Host "Added role '$roleName' to user '$username'"
+                }
+                catch {
+                    Write-Error "Error adding role '$roleName' to user '$username': $($_.Exception.Message)"
+                }
             }
-            catch {
-                Write-Error "Error adding role '$roleName' to user '$username': $($_.Exception.Message)"
-            }
-        }
  
-    }
-    else {
-        Write-Warning "User '$username' not found."
+        }
+        else {
+            Write-Warning "User '$username' not found."
+        }
     }
 }
+
 
 #Elapsed time
 $Time.Stop()

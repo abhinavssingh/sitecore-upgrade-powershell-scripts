@@ -1,3 +1,11 @@
+<#
+    .SYNOPSIS
+        Update users Profile data through csv file.
+    
+    .NOTES
+        Abhinav Singh
+#>
+
 $Time = [System.Diagnostics.Stopwatch]::StartNew()
 Write-Host "Script Execution Started"
 
@@ -34,32 +42,40 @@ $inputFile = $webRootPath + $uploadFile
 # Load the csv data into a variable
 $csvData = Import-Csv -Path $inputFile
 
-foreach ($row in $csvData) {
-    $userName = $row.UserName
-    $user = Get-User -Filter $row.UserName
+if ( $null -eq $csvData) {
+    Write-Host "No data found in the CSV file. Exiting script."
+    Close-Window
+    return
+}
 
-    if ($user) {
-        Write-Host "User found: $($user.Name)"
-        $key = "${userName}"
-        $oldValue = $user.Profile.GetCustomProperty($($row.PropertyName))
-        $itemData = New-Object PSObject -Property @{
-            "UserName"      = $userName
-            "Property Name" = $row.PropertyName
-            "Old Value"     = $oldValue
-            "New Value"     = $row.PropertyValue
-        }
-        # Set custom properties
-        Write-Host "Setting custom properties..."
-        Set-User -Identity $userName -CustomProperties @{
-            $row.PropertyName = $row.PropertyValue
-        }
-        # Add the data to the hashtable with the composite key
-        $data[$key] = $itemData
-        Write-Host "Custom properties updated and saved for $($user.Name)."
+else {
+    foreach ($row in $csvData) {
+        $userName = $row.UserName
+        $user = Get-User -Filter $row.UserName
 
-    }
-    else {
-        Write-Host "User with identity '$userIdentity' not found."
+        if ($user) {
+            Write-Host "User found: $($user.Name)"
+            $key = "${userName}"
+            $oldValue = $user.Profile.GetCustomProperty($($row.PropertyName))
+            $itemData = New-Object PSObject -Property @{
+                "UserName"      = $userName
+                "Property Name" = $row.PropertyName
+                "Old Value"     = $oldValue
+                "New Value"     = $row.PropertyValue
+            }
+            # Set custom properties
+            Write-Host "Setting custom properties..."
+            Set-User -Identity $userName -CustomProperties @{
+                $row.PropertyName = $row.PropertyValue
+            }
+            # Add the data to the hashtable with the composite key
+            $data[$key] = $itemData
+            Write-Host "Custom properties updated and saved for $($user.Name)."
+
+        }
+        else {
+            Write-Host "User with identity '$userIdentity' not found."
+        }
     }
 }
 

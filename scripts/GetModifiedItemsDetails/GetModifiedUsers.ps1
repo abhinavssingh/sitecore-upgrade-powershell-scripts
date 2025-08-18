@@ -98,5 +98,6 @@ else {
     
     $result |
     Show-ListView @props -Property @{Label = "User Name"; Expression = { $_.Name } },
-    @{Label = "Created Date"; Expression = { $_.CreationDate } }
+    @{Label = "Created Date"; Expression = { $_.CreationDate } },
+    @{Label = "Local Name"; Expression = { $_.LocalName } }
 }
