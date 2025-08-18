@@ -5,8 +5,8 @@ one version to another version.
 
 # Getting Started
 
-Install Sitecore PowerShell module from [here](https://github.com/SitecorePowerShell/Console/releases)
-Install the Sitecore upgrade scripts from package [folder](https://github.com/abhinavssingh/sitecore-upgrade-powershell-scripts/tree/main/package/Sitecore%20Upgrade%20Scripts-1.0.zip).
+- Install Sitecore PowerShell module from [here](https://github.com/SitecorePowerShell/Console/releases)
+- Install the Sitecore upgrade scripts from package [folder](https://github.com/abhinavssingh/sitecore-upgrade-powershell-scripts/tree/main/package/Sitecore%20Upgrade%20Scripts-1.0.zip).
 
 # Build and Test
 
