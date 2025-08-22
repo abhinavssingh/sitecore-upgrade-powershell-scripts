@@ -1,6 +1,6 @@
 <#
     .SYNOPSIS
-        Update users role through csv file.
+        Update security permission through csv file.
     
     .NOTES
         Abhinav Singh

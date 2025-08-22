@@ -1,6 +1,6 @@
 <#
     .SYNOPSIS
-        Export items of a particular node.
+        Gets security permission of a particular node.
     
     .NOTES
         Abhinav Singh

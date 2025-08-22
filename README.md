@@ -3,6 +3,8 @@
 This repo contains the Sitecore PowerShell scripts which will help you to measure the effectiveness of Sitecore migration from
 one version to another version.
 
+This repo also contains the [Custom Role module](https://github.com/abhinavssingh/sitecore-upgrade-powershell-scripts/blob/main/package/Sitecore%20Generic%20Roles%20and%20Permissions-1.0.zip) which will help you to setup Sitecore access management at granular level.
+
 # Getting Started
 
 - Install Sitecore PowerShell module from [here](https://github.com/SitecorePowerShell/Console/releases)
