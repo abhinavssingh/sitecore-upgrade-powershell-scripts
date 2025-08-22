@@ -1,0 +1,32 @@
+Path,Permission
+/sitecore/content/Applications/Control Panel/Preferences/Change wallpaper,ar|sitecore\Sitecore Client Authoring|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Preferences/User Options,ar|sitecore\Sitecore Client Authoring|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Preferences/Change password,ar|sitecore\Sitecore Client Authoring|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Preferences/Change personal information,ar|sitecore\Sitecore Client Authoring|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Preferences/Regional and language options,ar|sitecore\Sitecore Client Authoring|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Preferences/Reset My Settings,ar|sitecore\Sitecore Client Authoring|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Database,ar|sitecore\Sitecore Custom Limited Client Application Access|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore Client Users|pd|-item:read|ar|sitecore\Sitecore Custom Local Admin|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore Client Maintaining|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Database/Rebuild link database,ar|Everyone|pe|!*|ar|sitecore\Sitecore Client Maintaining|pe|+item:read|pd|+item:read|
+/sitecore/content/Applications/Control Panel/Database/Transfer to Database,ar|sitecore\Sitecore Client Developing|pd|+item:read|pe|+item:read|ar|Everyone|pe|!*|ar|sitecore\Sitecore Client Maintaining|pd|+item:read|pe|+item:read|ar|sitecore\Sitecore Custom Local Admin|pe|-item:read|
+/sitecore/content/Applications/Control Panel/Database/Clean Up Databases,ar|Everyone|pe|!*|ar|sitecore\Sitecore Client Maintaining|pe|+item:read|pd|+item:read|
+/sitecore/content/Applications/Control Panel/Globalization,ar|sitecore\Sitecore Custom Limited Client Application Access|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore Client Users|pd|-item:read|ar|sitecore\Sitecore Custom Local Admin|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore Client Maintaining|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Globalization/Export Language,ar|Everyone|pe|!*|ar|sitecore\Sitecore Client Maintaining|pe|+item:read|pd|+item:read|
+/sitecore/content/Applications/Control Panel/Globalization/Import Language,ar|Everyone|pe|!*|ar|sitecore\Sitecore Client Maintaining|pe|+item:read|pd|+item:read|
+/sitecore/content/Applications/Control Panel/Globalization/Add Language,ar|Everyone|pe|!*|ar|sitecore\Sitecore Client Maintaining|pe|+item:read|pd|+item:read|
+/sitecore/content/Applications/Control Panel/Globalization/Delete Language,ar|Everyone|pe|!*|ar|sitecore\Sitecore Client Maintaining|pe|+item:read|pd|+item:read|
+/sitecore/content/Applications/Control Panel/Administration,ar|sitecore\Sitecore Custom Limited Client Application Access|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore Client Users|pd|-item:read|
+/sitecore/content/Applications/Control Panel/Administration/Administration tools,ar|sitecore\Sitecore Client Developing|pd|+item:read|pe|+item:read|ar|sitecore\Sitecore Client Maintaining|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Administration/About,ar|sitecore\Sitecore Client Users|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Administration/Licenses,ar|sitecore\Sitecore Custom Limited Client Application Access|pd|-item:create|-item:delete|-item:rename|-item:write|-item:read|pe|-item:create|-item:delete|-item:rename|-item:write|-item:read|ar|sitecore\Sitecore Client Users|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Administration/Install Package,ar|sitecore\Sitecore Client Developing|pd|+item:read|pe|+item:read|ar|sitecore\Sitecore Client Maintaining|pd|+item:read|pe|+item:read|ar|sitecore\Sitecore Custom Local Admin|pe|-item:read|
+/sitecore/content/Applications/Control Panel/Administration/Update Installation Wizard,ar|sitecore\Sitecore Client Users|pe|+item:read|ar|sitecore\Sitecore Custom Local Admin|pe|-item:read|
+/sitecore/content/Applications/Control Panel/Reports,ar|sitecore\Sitecore Client Authoring|pe|+item:read|ar|sitecore\Sitecore Custom Limited Client Application Access|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore Client Users|pd|-item:read|ar|sitecore\Sitecore Custom Local Admin|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore Client Maintaining|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Reports/Broken Links,ar|sitecore\Sitecore Client Maintaining|pe|+item:read|pd|+item:read|ar|Everyone|pe|!*|ar|sitecore\Sitecore Client Authoring|pe|+item:read|pd|+item:read|
+/sitecore/content/Applications/Control Panel/Reports/Untranslated Fields,ar|sitecore\Sitecore Client Maintaining|pd|+item:read|pe|+item:read|ar|sitecore\Sitecore Client Translating|pd|+item:read|pe|+item:read|ar|sitecore\Sitecore Client Authoring|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Security,ar|sitecore\Sitecore Custom Limited Client Application Access|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore Client Account Managing|pd|+item:read|pe|+item:read|ar|sitecore\Sitecore Client Users|pd|-item:read|
+/sitecore/content/Applications/Control Panel/Security/Open User Manager,ar|sitecore\Sitecore Client Account Managing|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Security/Open Role Manager,ar|sitecore\Sitecore Client Account Managing|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Indexing,ar|sitecore\Sitecore Custom Limited Client Application Access|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore Client Users|pd|-item:read|ar|sitecore\Sitecore Custom Local Admin|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore Client Maintaining|pd|+item:read|pe|+item:read|
+/sitecore/content/Applications/Control Panel/Indexing/Populate Solr Managed Schema,ar|sitecore\Sitecore Client Maintaining|pe|+item:read|pd|+item:read|a?|Everyone|p*|!*|
+/sitecore/content/Applications/Control Panel/Indexing/Indexing Manager,ar|sitecore\Sitecore Client Maintaining|pe|+item:read|pd|+item:read|a?|Everyone|p*|!*|
+/sitecore/content/Applications/Control Panel/Analytics,ar|sitecore\Sitecore Client Users|pd|!*|pe|!*|ar|sitecore\Analytics Maintaining|pd|+item:read|pe|+item:read|

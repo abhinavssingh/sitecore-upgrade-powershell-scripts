@@ -1,0 +1,20 @@
+Path,Permission
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Marketing,ar|sitecore\Sitecore Client Users|pe|+item:read|pd|-item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Marketing/Forms,ar|sitecore\Forms Editor|pe|+item:read|ar|sitecore\Forms Publisher|pe|+item:read|ar|sitecore\Forms Data Administrator|pe|+item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/ContentEditing,ar|sitecore\testClientAccess|pe|+item:read|ar|sitecore\Sitecore Client Users|pd|-item:read|pe|+item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/ContentEditing/ContentEditor,ar|sitecore\Sitecore Client Authoring|pd|+item:read|pe|+item:read|ar|sitecore\testClientAccess|pd|+item:read|pe|+item:read|ar|sitecore\Sitecore Client Designing|pd|+item:read|pe|+item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/ContentEditing/ExperienceEditor,ar|sitecore\Sitecore Client Designing|pe|+item:read|ar|sitecore\Sitecore Client Authoring|pe|+item:read|ar|sitecore\Sitecore Client Users|pe|!*|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/ContentEditing/Media Library,ar|sitecore\Sitecore Client Authoring|pd|+item:read|pe|+item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/ContentEditing/Workbox,ar|sitecore\Sitecore Client Authoring|pd|+item:read|pe|+item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/ContentEditing/RecycleBin,ar|sitecore\Sitecore Client Authoring|pd|+item:read|pe|+item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/ContentEditing/PowerShell ISE,ar|sitecore\Sitecore Limited Content Editor|pd|-item:read|pe|-item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/ContentEditing/PowerShell Reports,ar|sitecore\Sitecore Client Authoring|pe|+item:read|pd|+item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Tools,ar|sitecore\Sitecore Client Users|pd|-item:read|pe|+item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Tools/ControlPanel,ar|sitecore\Sitecore Client Users|pd|+item:read|pe|+item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Tools/Desktop,ar|sitecore\Sitecore Custom Limited Client Application Access|pe|-item:read|ar|sitecore\Sitecore Client Users|pe|+item:read|ar|sitecore\Sitecore Custom Local Admin|pd|-item:read|pe|-item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Security,ar|sitecore\Sitecore Custom Limited Client Application Access|pd|-item:create|-item:delete|-item:rename|-item:write|-item:read|pe|-item:create|-item:delete|-item:rename|-item:write|-item:read|ar|sitecore\Sitecore Client Users|pd|-item:read|pe|+item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Security/UserManager,ar|sitecore\Sitecore Client Account Managing|pd|+item:read|pe|+item:read|ar|sitecore\Sitecore Client Users|pd|!*|pe|!*|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Security/SecurityEditor,ar|sitecore\Sitecore Client Securing|pd|+item:read|pe|+item:read|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Security/AccessViewer,ar|sitecore\Sitecore Client Securing|pe|+item:read|pd|+item:read|a?|Everyone|p*|!*|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Security/DomainManager,ar|sitecore\Sitecore Client Account Managing|pd|+item:read|pe|+item:read|ar|sitecore\Sitecore Client Users|pd|!*|pe|!*|
+/sitecore/client/Applications/Launchpad/PageSettings/Buttons/Security/RoleManager,ar|sitecore\Sitecore Client Account Managing|pd|+item:read|pe|+item:read|

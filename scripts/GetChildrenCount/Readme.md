@@ -5,6 +5,6 @@
 ### How to execute these scripts
 
 - Right click on Context Item
-- Go to the Scripts --> Content Migration --> Get Children Count
+- Go to the Scripts --> Content Migration --> Content --> Get Children Count
 - Select Nested true if you want nested children count
 - Select the templates what you want to exclude

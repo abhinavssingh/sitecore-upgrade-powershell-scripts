@@ -13,6 +13,6 @@
 ### How to get the sitecore modified items (option-2)
 
 - Right click on Context Item
-- Go to the Scripts --> Content Migration --> Get Modified Item
+- Go to the Scripts --> Content Migration --> Content --> Get Modified Item
 - Select Nested true if you want to unlock nested items
 - Select the templates what you want to exclude

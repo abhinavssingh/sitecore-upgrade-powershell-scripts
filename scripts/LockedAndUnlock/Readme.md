@@ -13,6 +13,6 @@
 ### How to unlock the sitecore items
 
 - Right click on Context Item
-- Go to the Scripts --> Content Migration --> Unlock Item
+- Go to the Scripts --> Content Migration --> Content --> Unlock Item
 - Select Nested true if you want to unlock nested items
 - Select the templates what you want to exclude

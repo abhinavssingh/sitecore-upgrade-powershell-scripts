@@ -5,7 +5,7 @@
 ### How to delete the items
 
 - Right click on Context Item
-- Go to the Scripts --> Content Migration --> Delete Item
+- Go to the Scripts --> Content Migration --> Content --> Delete Item
 - Select Nested true if you want nested items to delete
 - Select the templates what you want to exclude
 

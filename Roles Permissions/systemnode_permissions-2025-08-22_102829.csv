@@ -1,0 +1,41 @@
+Path,Permission
+/sitecore/system,au|sitecore\ServicesAPI|p*|-item:read|
+/sitecore/system,au|sitecore\ServicesAPI|p*|-item:read|
+/sitecore/system/Aliases,ar|sitecore\Analytics Maintaining|pd|+item:delete|+item:create|+item:rename|+item:read|+item:write|pe|+item:create|+item:read|+item:write|
+/sitecore/system/Dictionary/Feature,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/system/Dictionary/Feature/Content Export Import,ar|sitecore\Everyone|pe|+item:read|
+/sitecore/system/Languages,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|+item:read|-item:rename|+item:create|-item:write|ar|sitecore\Everyone|pd|+language:write|+language:read|pe|+language:write|+language:read|
+/sitecore/system/Modules/PowerShell/Script Library/SPE/Core/Platform/Toolbox/PowerShell Background Session Manager,ar|sitecore\Developer|pe|+item:read|pd|+item:read|ar|sitecore\Sitecore Client Users|pe|-item:read|pd|-item:read|
+/sitecore/system/Modules/PowerShell/Script Library/SPE/Core/Platform/Toolbox/Rebuild script integration points,ar|sitecore\Developer|pe|+item:read|pd|+item:read|ar|sitecore\Sitecore Client Users|pe|-item:read|pd|-item:read|
+/sitecore/system/Modules/PowerShell/Settings/Console,ar|sitecore\Developer|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
+/sitecore/system/Modules/PowerShell/Settings/Context,ar|sitecore\Sitecore Client Users|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
+/sitecore/system/Modules/PowerShell/Settings/Default,ar|sitecore\Sitecore Client Users|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
+/sitecore/system/Modules/PowerShell/Settings/ISE,ar|sitecore\Developer|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
+/sitecore/system/Modules/PowerShell/Settings/RemoteAutomation,ar|sitecore\Developer|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
+/sitecore/system/Publishing targets,ar|sitecore\Sitecore Client Publishing|pe|+item:read|+item:write|pd|+item:read|+item:write|
+/sitecore/system/Settings/Buckets/Search Types/Debug,ar|sitecore\Author|pe|-item:read|
+/sitecore/system/Settings/Buckets/Settings/Search Operations/Fields/Search and Replace,ar|Everyone|pe|!*|pd|!*|
+/sitecore/system/Settings/Buckets/Settings/Search Operations/Information Architecture/Apply Security Rule,ar|sitecore\Author|pe|-item:read|pd|-item:read|ar|sitecore\Sitecore Client Securing|pe|+item:read|ar|sitecore\Developer|pe|+item:read|
+/sitecore/system/Settings/Buckets/Settings/Search Operations/Information Architecture/Delete All Items in List,ar|sitecore\Author|pe|-item:read|pd|-item:read|
+/sitecore/system/Settings/Buckets/Settings/Search Operations/Information Architecture/Serialize Items,ar|sitecore\Author|pe|-item:read|pd|-item:read|ar|sitecore\Developer|pe|+item:read|pd|+item:read|
+/sitecore/system/Settings/Buckets/Settings/Search Operations/Marketing/Apply Campaigns to All Items,ar|sitecore\Author|pe|+item:read|pd|+item:read|
+/sitecore/system/Settings/Buckets/Settings/Search Operations/Marketing/Apply Profile Score to All Items,ar|sitecore\Author|pe|+item:read|pd|+item:read|
+/sitecore/system/Settings/Buckets/Settings/Search Operations/Presentation/Apply Presentation to All Items,ar|sitecore\Author|pe|-item:read|pd|-item:read|
+/sitecore/system/Settings/Buckets/TagRepository,ar|sitecore\Sitecore Client Authoring|pe|+item:read|pd|+item:read|
+/sitecore/system/Settings/Buckets/Views/ID View,ar|sitecore\Author|pe|-item:read|pd|-item:read|ar|sitecore\Analytics Personalization|pe|-item:read|pd|-item:read|
+/sitecore/system/Settings/Webhooks,ar|Everyone|pe|!*|pd|!*|ar|sitecore\Developer|pe|+item:create|+item:read|+item:rename|+item:delete|+item:write|^*|+item:admin|pd|+item:create|+item:read|+item:rename|+item:delete|+item:write|^*|+item:admin|
+/sitecore/system/Webhooks,ar|Everyone|pe|!*|pd|!*|ar|sitecore\Developer|pe|+item:create|+item:read|+item:rename|+item:delete|+item:write|^*|+item:admin|pd|+item:create|+item:read|+item:rename|+item:delete|+item:write|^*|+item:admin|
+/sitecore/system/Workflows/Sample Webhook Workflow/Draft,ar|sitecore\Sitecore Client Authoring|pd|+workflowState:delete|+workflowState:write|pe|+workflowState:delete|+workflowState:write|
+/sitecore/system/Workflows/Sample Webhook Workflow/Draft/Submit,ar|sitecore\Sitecore Client Authoring|pd|+workflowCommand:execute|pe|+workflowCommand:execute|
+/sitecore/system/Workflows/Sample Webhook Workflow/Draft/__OnSave,ar|sitecore\Sitecore Client Authoring|pd|+workflowCommand:execute|pe|+workflowCommand:execute|
+/sitecore/system/Workflows/Sample Webhook Workflow/Awaiting Approval,ar|sitecore\Sitecore Client Authoring|pd|+workflowState:delete|+workflowState:write|pe|+workflowState:delete|+workflowState:write|
+/sitecore/system/Workflows/Sample Webhook Workflow/Awaiting Approval/Approve,ar|sitecore\Sitecore Client Authoring|pd|+workflowCommand:execute|pe|+workflowCommand:execute|
+/sitecore/system/Workflows/Sample Webhook Workflow/Awaiting Approval/Reject,ar|sitecore\Sitecore Client Authoring|pe|+workflowCommand:execute|pd|+workflowCommand:execute|
+/sitecore/system/Workflows/Sample Webhook Workflow/Approved,ar|sitecore\Sitecore Client Authoring|pd|+workflowState:delete|+workflowState:write|pe|+workflowState:delete|+workflowState:write|
+/sitecore/system/Workflows/Sample Workflow/Draft,ar|sitecore\Sitecore Client Authoring|pd|+workflowState:delete|+workflowState:write|pe|+workflowState:delete|+workflowState:write|ar|sitecore\Sitecore General Publisher|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|+item:delete|+item:write|+item:read|+item:rename|+item:create|ar|sitecore\Sitecore General Reviewer|pd|-item:read|pe|-item:read|
+/sitecore/system/Workflows/Sample Workflow/Draft/Submit,ar|sitecore\Sitecore Client Authoring|pd|+workflowCommand:execute|pe|+workflowCommand:execute|
+/sitecore/system/Workflows/Sample Workflow/Draft/__OnSave,ar|sitecore\Sitecore Client Authoring|pd|+workflowCommand:execute|pe|+workflowCommand:execute|
+/sitecore/system/Workflows/Sample Workflow/Awaiting Approval,ar|sitecore\Sitecore Client Authoring|pd|+workflowState:delete|+workflowState:write|pe|+workflowState:delete|+workflowState:write|ar|sitecore\Sitecore General Publisher|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore General Editor|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore General Reviewer|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|+item:delete|+item:write|+item:read|+item:rename|+item:create|
+/sitecore/system/Workflows/Sample Workflow/Awaiting Approval/Approve,ar|sitecore\Sitecore Client Authoring|pd|+workflowCommand:execute|pe|+workflowCommand:execute|
+/sitecore/system/Workflows/Sample Workflow/Awaiting Approval/Reject,ar|sitecore\Sitecore Client Authoring|pe|+workflowCommand:execute|pd|+workflowCommand:execute|
+/sitecore/system/Workflows/Sample Workflow/Approved,ar|sitecore\Sitecore Client Authoring|pd|+workflowState:delete|+workflowState:write|pe|+workflowState:delete|+workflowState:write|ar|sitecore\Sitecore General Publisher|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|+item:delete|+item:write|+item:read|+item:rename|+item:create|ar|sitecore\Sitecore General Editor|pd|-item:read|pe|-item:read|ar|sitecore\Sitecore General Reviewer|pd|+item:read|pe|+item:read|

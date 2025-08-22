@@ -1,0 +1,7 @@
+Path,Permission
+/sitecore/media library,au|sitecore\ServicesAPI|p*|+item:read|^*|ar|sitecore\Sitecore Client Authoring|pe|+item:create|pd|+item:rename|+item:delete|+item:write|+item:create|
+/sitecore/media library,au|sitecore\ServicesAPI|p*|+item:read|^*|ar|sitecore\Sitecore Client Authoring|pe|+item:create|pd|+item:rename|+item:delete|+item:write|+item:create|
+/sitecore/media library/Default Website,ar|sitecore\Sitecore Common Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/media library/System/Forms,ar|sitecore\Sitecore Common Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/media library/System/Simulator Backgrounds,ar|sitecore\Sitecore Common Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/media library/System/Template Thumbnails,ar|sitecore\Sitecore Common Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|

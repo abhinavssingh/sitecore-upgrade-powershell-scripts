@@ -1,0 +1,40 @@
+Path,Permission
+/sitecore/layout,au|sitecore\ServicesAPI|p*|-item:read|
+/sitecore/layout,au|sitecore\ServicesAPI|p*|-item:read|
+/sitecore/layout/Controllers,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Devices,ar|sitecore\Sitecore Client Developing|pd|+item:delete|+item:create|+item:rename|+item:read|+item:write|pe|+item:create|
+/sitecore/layout/Devices/Default,ar|sitecore\Sitecore General Editor|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Devices/Print,ar|sitecore\Sitecore General Editor|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Devices/Feed,ar|sitecore\Sitecore General Editor|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Layouts,ar|sitecore\Designer|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|+item:create|
+/sitecore/layout/Layouts/Foundation,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Layouts/Feature,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Layouts/Project,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Layouts/Sample Layout,ar|sitecore\Sitecore Common Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Layouts/Modules,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Layouts/System,ar|sitecore\Sitecore General Editor|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Layouts/System/Feed Delivery Layout,ar|sitecore\Sitecore General Editor|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Layouts/System/Simulated Device Layout,ar|sitecore\Sitecore General Editor|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Models/Foundation,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Models/Feature,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Models/Project,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Placeholder Settings,ar|sitecore\Sitecore Client Developing|pd|+item:delete|+item:create|+item:rename|+item:read|+item:write|pe|+item:create|
+/sitecore/layout/Placeholder Settings/Foundation,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Placeholder Settings/Feature,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Placeholder Settings/Project,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Placeholder Settings/content,ar|sitecore\Sitecore Common Editor|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Placeholder Settings/webedit,ar|sitecore\Sitecore Common Editor|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Renderings,ar|sitecore\Designer|pd|+item:delete|+item:create|+item:rename|+item:read|+item:write|pe|+item:create|
+/sitecore/layout/Renderings/Foundation,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Renderings/Feature,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Renderings/Project,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Renderings/Sample,ar|sitecore\Sitecore Common Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Renderings/System,ar|sitecore\Sitecore Common Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Renderings/Modules,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Sublayouts,ar|sitecore\Designer|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|+item:create|ar|sitecore\Sitecore Common Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Sublayouts/App Center Sync,ar|sitecore\Sitecore Client Authoring|pd|+item:delete|+item:write|+item:rename|+item:create|pe|+item:delete|+item:write|+item:rename|+item:create|ar|sitecore\Sitecore Limited Page Editor|pd|+item:delete|+item:write|+item:rename|+item:create|pe|+item:delete|+item:write|+item:rename|+item:create|ar|sitecore\Sitecore General Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|ar|sitecore\Sitecore Client Developing|pd|+item:delete|+item:write|+item:rename|+item:create|pe|+item:delete|+item:write|+item:rename|+item:create|ar|sitecore\Sitecore Client Users|pd|+item:delete|+item:write|+item:rename|+item:create|pe|+item:delete|+item:write|+item:rename|+item:create|ar|sitecore\Sitecore Client Designing|pd|+item:delete|+item:write|+item:rename|+item:create|pe|+item:delete|+item:write|+item:rename|+item:create|
+/sitecore/layout/Sublayouts/Modules,ar|sitecore\Sitecore General Editor|pd|+item:delete|+item:write|+item:read|+item:rename|+item:create|pe|-item:delete|+item:read|-item:rename|+item:create|-item:write|
+/sitecore/layout/Sublayouts/Sample Datasource Sublayout,ar|sitecore\Sitecore General Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Sublayouts/Sample Inner Sublayout,ar|sitecore\Sitecore General Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Sublayouts/Sample Sublayout,ar|sitecore\Sitecore General Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
+/sitecore/layout/Simulators,ar|sitecore\Sitecore Common Editor|pd|-item:create|-item:delete|+item:read|-item:rename|-item:write|pe|-item:create|-item:delete|+item:read|-item:rename|-item:write|
